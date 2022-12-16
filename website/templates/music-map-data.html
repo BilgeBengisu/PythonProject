@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Music Map
+{% endblock %}
+
+{% block main %}
+    <body id= "music-map-data">
+        <div class="jumbotron_music">
+            <h1>Music Taste Database</h1>
+        </div>
+        <h5> New Music Data! Thanks for feeding our machine with good music! </h5>
+        <form action="/music-map-data" method="post" autocomplete="off">
+            <input id="music-input" name="music-input" type="text" autocomplete="off">
+            <button id="music-button">Add Artist/Band</button>
+        </form>
+
+        <ul>
+            {% for music_name in musicdata %}
+                <li>{{ artist }}</li>
+            {% endfor %}
+        </ul>
+
+        <footer>
+            <a href="https://ide-b1fbbaf72485426ab0d90c803fb755ad-8080.cs50.ws/">go to homepage</a>
+        </footer>
+    </form>
+    </body>
+{% endblock %}

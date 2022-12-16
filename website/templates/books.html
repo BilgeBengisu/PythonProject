@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Books
+{% endblock %}
+
+{% block main %}
+    <body id= "books">
+        <div class="jumbotron_books">
+            <h1>Read Books</h1>
+        </div>
+        <h5> New Book! </h5>
+        <form action="/books" method="post" autocomplete="off">
+            <input id="book-input" name="book-input" type="text" autocomplete="off">
+            <button id="book-button">Add Book</button>
+        </form>
+        
+        <ul>
+            {% for book in books %}
+                <li>{{ book }}</li>
+            {% endfor %}
+        </ul>
+        
+        <footer>
+            <a href="https://ide-b1fbbaf72485426ab0d90c803fb755ad-8080.cs50.ws/">go to homepage</a>
+        </footer>
+    </body>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Music Search
+{% endblock %}
+
+{% block main %}
+    <body id= "music_search">
+        <h5> Search Music! </h5>
+        <form action="/music-search" method="post">
+            <input id="music_search_input" name="music_search_input" type="text" autocomplete="off">
+            <button id="music_search_button">Search Music</button>
+        </form>
+        <ul>
+            {% for track in music_search %}
+                {% if track %}
+                    <li>{{ track }}</li>
+                {% else %}
+                    <li>waiting for music search</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </body>
+
+{% endblock %}

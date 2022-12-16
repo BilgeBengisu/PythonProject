@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Spotify Playlist Sorter
+{% endblock %}
+
+{% block main %}
+    <ol>
+            {% for music in music_data %}
+                <li>{{ music }}</li>
+            {% endfor %}
+    </ol>
+{% endblock %}
