@@ -249,8 +249,8 @@ def music_search():
 @login_required
 def music_search_input(music_search_input):
     music_search = []
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=secrets.client_id,
-                                                   client_secret=secrets.client_secret,
+    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
+                                                   client_secret=CLIENT_SECRET,
                                                    redirect_uri="http://127.0.0.1:8081/",
                                                    scope="user-library-read playlist-modify-public"))
     results = sp.search(q=music_search_input, limit=20)
