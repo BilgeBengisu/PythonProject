@@ -226,8 +226,8 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="e8428daa81a645c79bd695
 @login_required
 def saved_tracks():
     music_data = []
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="e8428daa81a645c79bd69599c62ca09b",
-                                                   client_secret="ad668440ec204f93bb23c2a92896c988",
+    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
+                                                   client_secret=CLIENT_SECRET,
                                                    redirect_uri="http://127.0.0.1:8081/",
                                                    scope="user-library-read playlist-modify-public"))
     results = sp.current_user_saved_tracks()
