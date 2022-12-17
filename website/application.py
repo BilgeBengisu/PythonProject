@@ -217,8 +217,8 @@ def create_playlist(name, public):
     json_response = response.json()
 
 global sp
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="e8428daa81a645c79bd69599c62ca09b",
-                                                   client_secret="ad668440ec204f93bb23c2a92896c988",
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
+                                                   client_secret=CLIENT_SECRET,
                                                    redirect_uri="http://127.0.0.1:8081/",
                                                    scope="user-library-read playlist-modify-public"))
 
